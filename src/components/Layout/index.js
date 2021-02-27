@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { device } from '../../theme/breakpoints';
+import { device } from "../../theme/breakpoints";
 
 const StyledContainer = styled.div`
   padding: 50px 0;

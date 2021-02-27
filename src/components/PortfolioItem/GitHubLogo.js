@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const GitHubLogo = () => (
   <svg width="150px" height="150px" viewBox="0 0 185 180">

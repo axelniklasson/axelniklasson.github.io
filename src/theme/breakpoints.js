@@ -1,3 +1,3 @@
 export const device = {
-  mobile: '(max-width: 850px)',
+  mobile: "(max-width: 850px)",
 };

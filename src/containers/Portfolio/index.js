@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from '../../components/Layout';
-import PortfolioItem from '../../components/PortfolioItem';
-import Spinner from '../../components/Spinner';
-import useContentfulClient from '../../hooks/useContentfulClient';
+import { Container } from "../../components/Layout";
+import PortfolioItem from "../../components/PortfolioItem";
+import Spinner from "../../components/Spinner";
+import useContentfulClient from "../../hooks/useContentfulClient";
 
 const Portfolio = () => {
   const [loading, setLoading] = React.useState(true);

@@ -1,7 +1,7 @@
-import marked from 'marked';
-import React from 'react';
+import marked from "marked";
+import React from "react";
 
-const Content = ({ markdown = '' }) => (
+const Content = ({ markdown = "" }) => (
   <div dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
 );
 

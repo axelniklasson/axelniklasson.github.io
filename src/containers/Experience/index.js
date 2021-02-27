@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import Content from '../../components/Content';
-import ExperienceTimeline from '../../components/ExperienceTimeline';
-import { Container } from '../../components/Layout';
-import Spinner from '../../components/Spinner';
-import useContentfulClient from '../../hooks/useContentfulClient';
+import Content from "../../components/Content";
+import ExperienceTimeline from "../../components/ExperienceTimeline";
+import { Container } from "../../components/Layout";
+import Spinner from "../../components/Spinner";
+import useContentfulClient from "../../hooks/useContentfulClient";
 
 const Experience = () => {
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState({
-    heading: '',
-    content: '',
+    heading: "",
+    content: "",
     experienceItems: [],
   });
   const client = useContentfulClient();

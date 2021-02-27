@@ -1,15 +1,15 @@
-import throttle from 'lodash.throttle';
-import React from 'react';
+import throttle from "lodash.throttle";
+import React from "react";
 
-import Divider from './components/Divider';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import About from './containers/About';
-import Experience from './containers/Experience';
-import Footer from './containers/Footer';
-import Portfolio from './containers/Portfolio';
-import Social from './containers/Social';
-import { ThemeContext, themes } from './theme/theme-context';
+import Divider from "./components/Divider";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import About from "./containers/About";
+import Experience from "./containers/Experience";
+import Footer from "./containers/Footer";
+import Portfolio from "./containers/Portfolio";
+import Social from "./containers/Social";
+import { ThemeContext, themes } from "./theme/theme-context";
 
 const App = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
@@ -31,10 +31,10 @@ const App = () => {
 
   React.useEffect(() => {
     updateNav();
-    window.addEventListener('scroll', throttle(updateNav, 100));
+    window.addEventListener("scroll", throttle(updateNav, 100));
 
     return () => {
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 

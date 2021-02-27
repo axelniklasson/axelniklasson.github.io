@@ -1,15 +1,15 @@
-import GitHubIcon from '../../images/github.svg';
-import LinkedInIcon from '../../images/linkedin.svg';
+import GitHubIcon from "../../images/github.svg";
+import LinkedInIcon from "../../images/linkedin.svg";
 
 const SOCIAL_LINKS = [
   {
-    text: 'LinkedIn',
-    url: 'https://linkedin.com/in/axelniklasson',
+    text: "LinkedIn",
+    url: "https://linkedin.com/in/axelniklasson",
     icon: LinkedInIcon,
   },
   {
-    text: 'GitHub',
-    url: 'https://github.com/axelniklasson',
+    text: "GitHub",
+    url: "https://github.com/axelniklasson",
     icon: GitHubIcon,
   },
 ];

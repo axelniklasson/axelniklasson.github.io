@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import LINKS from './links';
-import SocialItem from './social-item';
+import LINKS from "./links";
+import SocialItem from "./social-item";
 
 const Wrapper = styled.div`
   display: flex;

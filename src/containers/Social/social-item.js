@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { device } from '../../theme/breakpoints';
+import { device } from "../../theme/breakpoints";
 
 // TODO migrate scaleOnHover
 const Wrapper = styled.div`
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 
 const SocialItem = ({ icon, text, url }) => {
   function onClick() {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   }
 
   return (

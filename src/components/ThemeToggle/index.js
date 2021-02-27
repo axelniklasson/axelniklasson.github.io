@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { ThemeContext } from '../../theme/theme-context';
-import './style.scss';
+import { ThemeContext } from "../../theme/theme-context";
+import "./style.scss";
 
 const ThemeToggle = ({ bgColor, title, subtitle, ...rest }) => {
   const { toggleTheme, theme } = React.useContext(ThemeContext);
@@ -9,7 +9,7 @@ const ThemeToggle = ({ bgColor, title, subtitle, ...rest }) => {
   return (
     <div className="themeToggle">
       <button onClick={toggleTheme}>
-        Set theme to {theme.type === 'light' ? 'dark' : 'light'}
+        Set theme to {theme.type === "light" ? "dark" : "light"}
       </button>
       <pre>{JSON.stringify(theme)}</pre>
     </div>

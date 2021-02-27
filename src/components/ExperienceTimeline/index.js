@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './style.scss';
+import "./style.scss";
 
 const ExperienceTimeline = ({ items }) => (
   <div className="experience-timeline">
@@ -11,7 +11,7 @@ const ExperienceTimeline = ({ items }) => (
           <img
             src={el.employerLogo}
             alt={el.title}
-            onClick={() => window.open(el.employerLink, '_blank')}
+            onClick={() => window.open(el.employerLink, "_blank")}
           />
           <div className="experience-timeline-item-content">
             <p>{el.title}</p>

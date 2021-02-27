@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import Content from '../../components/Content';
-import { Container } from '../../components/Layout';
-import Spinner from '../../components/Spinner';
-import Timeline from '../../components/Timeline';
-import useContentfulClient from '../../hooks/useContentfulClient';
-import { device } from '../../theme/breakpoints';
+import Content from "../../components/Content";
+import { Container } from "../../components/Layout";
+import Spinner from "../../components/Spinner";
+import Timeline from "../../components/Timeline";
+import useContentfulClient from "../../hooks/useContentfulClient";
+import { device } from "../../theme/breakpoints";
 
 const StyledContainer = styled(Container)`
   display: flex;
@@ -33,8 +33,8 @@ const TimelineWrapper = styled.div`
 const About = () => {
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState({
-    heading: '',
-    content: '',
+    heading: "",
+    content: "",
     timelineItems: [],
   });
   const client = useContentfulClient();

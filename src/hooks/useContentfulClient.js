@@ -1,4 +1,4 @@
-import { createClient } from 'contentful';
+import { createClient } from "contentful";
 
 export default function useContentfulClient() {
   const client = createClient({
@@ -11,7 +11,7 @@ export default function useContentfulClient() {
       return new Promise((resolve, reject) => {
         client
           .getEntries({
-            content_type: 'aboutSection',
+            content_type: "aboutSection",
             limit: 1,
           })
           .then((entries) => {
@@ -19,8 +19,8 @@ export default function useContentfulClient() {
 
             client
               .getEntries({
-                content_type: 'timelineItem',
-                order: '-fields.order',
+                content_type: "timelineItem",
+                order: "-fields.order",
               })
               .then((entries) => {
                 resolve({
@@ -37,8 +37,8 @@ export default function useContentfulClient() {
       return new Promise((resolve, reject) => {
         client
           .getEntries({
-            content_type: 'portfolioItem',
-            order: 'fields.order',
+            content_type: "portfolioItem",
+            order: "fields.order",
           })
           .then((entries) => {
             resolve(entries.items.map((el) => el.fields));
@@ -50,7 +50,7 @@ export default function useContentfulClient() {
       return new Promise((resolve, reject) => {
         client
           .getEntries({
-            content_type: 'headerSection',
+            content_type: "headerSection",
             limit: 1,
           })
           .then((data) => {
@@ -73,7 +73,7 @@ export default function useContentfulClient() {
       return new Promise((resolve, reject) => {
         client
           .getEntries({
-            content_type: 'experienceSection',
+            content_type: "experienceSection",
             limit: 1,
           })
           .then((entries) => {
@@ -81,8 +81,8 @@ export default function useContentfulClient() {
 
             client
               .getEntries({
-                content_type: 'experienceItem',
-                order: '-fields.order',
+                content_type: "experienceItem",
+                order: "-fields.order",
               })
               .then((entries) => {
                 resolve({
@@ -102,7 +102,7 @@ export default function useContentfulClient() {
       return new Promise((resolve, reject) => {
         client
           .getEntries({
-            content_type: 'headerSection',
+            content_type: "headerSection",
             limit: 1,
           })
           .then((data) => {
