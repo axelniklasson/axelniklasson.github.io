@@ -1,16 +1,40 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
 
-import Content from "../../components/Content";
-import Spinner from "../../components/Spinner";
-import Timeline from "../../components/Timeline";
-import useContentfulClient from "../../hooks/useContentfulClient";
-import "./style.scss";
+import Content from '../../components/Content';
+import { Container } from '../../components/Layout';
+import Spinner from '../../components/Spinner';
+import Timeline from '../../components/Timeline';
+import useContentfulClient from '../../hooks/useContentfulClient';
+import { device } from '../../theme/breakpoints';
+
+const StyledContainer = styled(Container)`
+  display: flex;
+  min-height: 500px;
+
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  flex-basis: 60%;
+
+  @media ${device.mobile} {
+    flex-basis: 100%;
+    margin-bottom: 25px;
+  }
+`;
+
+const TimelineWrapper = styled.div`
+  flex-basis: 40%;
+`;
 
 const About = () => {
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState({
-    heading: "",
-    content: "",
+    heading: '',
+    content: '',
     timelineItems: [],
   });
   const client = useContentfulClient();
@@ -25,24 +49,23 @@ const About = () => {
     fetchData();
   }, []);
 
-  if (loading)
-    return (
-      <div className="about container">
-        <Spinner />
-      </div>
-    );
-
   return (
-    <div className="about container" id="about">
-      <div className="content">
-        <h2>{data.heading}</h2>
-        <Content markdown={data.content} />
-      </div>
+    <StyledContainer id="about">
+      {loading ? (
+        <Spinner />
+      ) : (
+        <React.Fragment>
+          <ContentWrapper>
+            <h2>{data.heading}</h2>
+            <Content markdown={data.content} />
+          </ContentWrapper>
 
-      <div className="timeline-wrapper">
-        <Timeline items={data.timelineItems} />
-      </div>
-    </div>
+          <TimelineWrapper>
+            <Timeline items={data.timelineItems} />
+          </TimelineWrapper>
+        </React.Fragment>
+      )}
+    </StyledContainer>
   );
 };
 

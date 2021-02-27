@@ -1,0 +1,28 @@
+.divider {
+  text-align: center;
+  padding: 50px 0;
+
+  h2 {
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  * {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media screen and (max-width: $mobile-max) {
+  .divider h2 {
+    font-size: 40px;
+  }
+}

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import PortfolioItem from "../../components/PortfolioItem";
-import Spinner from "../../components/Spinner";
-import useContentfulClient from "../../hooks/useContentfulClient";
-import "./style.scss";
+import { Container } from '../../components/Layout';
+import PortfolioItem from '../../components/PortfolioItem';
+import Spinner from '../../components/Spinner';
+import useContentfulClient from '../../hooks/useContentfulClient';
 
 const Portfolio = () => {
   const [loading, setLoading] = React.useState(true);
@@ -20,14 +20,16 @@ const Portfolio = () => {
     fetchData();
   }, []);
 
-  if (loading) return <Spinner />;
-
   return (
-    <div className="portfolio container">
-      {portfolio.map((el, index) => (
-        <PortfolioItem key={index} {...el} alignLeft={index % 2 === 0} />
-      ))}
-    </div>
+    <Container id="portfolio">
+      {loading ? (
+        <Spinner />
+      ) : (
+        portfolio.map((el, index) => (
+          <PortfolioItem key={index} {...el} alignLeft={index % 2 === 0} />
+        ))
+      )}
+    </Container>
   );
 };
 

@@ -1,14 +1,14 @@
-import React from "react";
-import useContentfulClient from "../../hooks/useContentfulClient";
+import React from 'react';
 
-import "./style.scss";
+import useContentfulClient from '../../hooks/useContentfulClient';
+import './style.scss';
 
-const TITLE = "Axel Niklasson";
+const TITLE = 'Axel Niklasson';
 
 const Navbar = ({ showNavbar }) => {
-  const [profilePicture, setProfilePicture] = React.useState("");
+  const [profilePicture, setProfilePicture] = React.useState('');
   const [showDropdown, setShowDropdown] = React.useState(false);
-  const [className, setClassName] = React.useState("navbar");
+  const [className, setClassName] = React.useState('navbar');
   const ref = React.createRef(null);
   const client = useContentfulClient();
 
@@ -33,7 +33,7 @@ const Navbar = ({ showNavbar }) => {
   }
 
   React.useEffect(() => {
-    const className = showNavbar ? "fadeIn" : "fadeOut";
+    const className = showNavbar ? 'fadeIn' : 'fadeOut';
     setClassName(`navbar ${className}`);
   }, [showNavbar]);
 
@@ -48,23 +48,22 @@ const Navbar = ({ showNavbar }) => {
       <div>
         <div>
           <img
-            onClick={() => jump("header")}
+            onClick={() => jump('header')}
             src={profilePicture}
             alt="header"
           />
           <span className="hide-mobile">{TITLE}</span>
         </div>
         <div>
-          <ul className={showDropdown ? "expanded" : ""}>
+          <ul className={showDropdown ? 'expanded' : ''}>
             <NavLink id="about" text="About" />
             <NavLink id="portfolio" text="Portfolio" />
             <NavLink id="experience" text="Experience" />
           </ul>
 
           <div
-            className={showDropdown ? "menuIcon toggled" : "menuIcon"}
-            onClick={toggleDropdown}
-          >
+            className={showDropdown ? 'menuIcon toggled' : 'menuIcon'}
+            onClick={toggleDropdown}>
             <div />
             <div />
             <div />

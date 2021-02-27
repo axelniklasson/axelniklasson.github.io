@@ -1,25 +1,35 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
 
-import GitHub from "../../images/github.svg";
-import LinkedIn from "../../images/linkedin.svg";
-import "./style.scss";
+import LINKS from './links';
+import SocialItem from './social-item';
 
-const LINKEDIN_URL = "https://linkedin.com/in/axelniklasson";
-const GITHUB_URL = "https://github.com/axelniklasson";
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 0;
+  flex-wrap: wrap;
+  color: white;
+  background: linear-gradient(to right, #243b55, #141e30);
+`;
 
-const SocialItem = ({ icon, text, link }) => (
-  <div className="social-item" onClick={() => window.open(link, "_blank")}>
-    <img src={icon} alt={text} />
-    <p>{text}</p>
-  </div>
-);
+const Heading = styled.h2`
+  color: white;
+  flex-basis: 100%;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 0;
+`;
 
 const Social = () => (
-  <div className="social">
-    <h2>Find me on the Internet</h2>
-    <SocialItem icon={LinkedIn} text="LinkedIn" link={LINKEDIN_URL} />
-    <SocialItem icon={GitHub} text="GitHub" link={GITHUB_URL} />
-  </div>
+  <Wrapper>
+    <Heading>Find me on the Internet</Heading>
+    {LINKS.map((link) => (
+      <SocialItem {...link} />
+    ))}
+  </Wrapper>
 );
 
 export default Social;

@@ -1,8 +1,8 @@
-import axios from "axios";
-import React from "react";
+import axios from 'axios';
+import React from 'react';
 
-import Spinner from "../../components/Spinner";
-import "./style.scss";
+import Spinner from '../../components/Spinner';
+import './style.scss';
 
 const Footer = () => {
   const [loading, setLoading] = React.useState(true);
@@ -11,7 +11,7 @@ const Footer = () => {
   React.useEffect(() => {
     axios
       .get(
-        "https://api.github.com/repos/axelniklasson/axelniklasson.se/branches/master"
+        'https://api.github.com/repos/axelniklasson/axelniklasson.se/branches/master',
       )
       .then((res) => {
         setLoading(false);
@@ -41,7 +41,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <p>
-        Version{" "}
+        Version{' '}
         <a href="https://github.com/axelniklasson/axelniklasson.se">{sha}</a>
       </p>
     </div>

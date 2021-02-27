@@ -1,16 +1,16 @@
-import React from "react";
-import useContentfulClient from "../../hooks/useContentfulClient";
+import React from 'react';
 
-import "./style.scss";
+import useContentfulClient from '../../hooks/useContentfulClient';
+import './style.scss';
 
 const Header = React.forwardRef((props, ref) => {
   const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState({
-    head1: "",
-    head2: "",
-    sub1: "",
-    sub2: "",
-    profilePicture: "",
+    head1: '',
+    head2: '',
+    sub1: '',
+    sub2: '',
+    profilePicture: '',
   });
   const client = useContentfulClient();
 
