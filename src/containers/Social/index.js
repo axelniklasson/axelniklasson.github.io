@@ -26,8 +26,8 @@ const Heading = styled.h2`
 const Social = () => (
   <Wrapper>
     <Heading>Find me on the Internet</Heading>
-    {LINKS.map((link) => (
-      <SocialItem {...link} />
+    {LINKS.map((link, idx) => (
+      <SocialItem key={idx} {...link} />
     ))}
   </Wrapper>
 );
